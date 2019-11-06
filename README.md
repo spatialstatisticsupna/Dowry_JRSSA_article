@@ -9,8 +9,6 @@ This repository contains supplementary material the R code to fit the models des
 # Supplementary-Material
 
 ## Description of the covariates 
-% __Description of the covariates__
-INSERTAR LAS ECUACIONES
 
 - x0: Political party of the Chief Minister ruling Uttar Pradesh during the study period: Bharatiya Janata Party (BJP) during 2001; Bahujan Samaj Party (BSP) during 2002-2003 and 2007-2011; Samajwadi Party (SP) during 2004-2006 and 2012-2014 (Source: https://www.mapsofindia.com/uttar-pradesh/chief-ministers.html or https://en.wikipedia.org/wiki/List_of_chief_ministers_of_Uttar_Pradesh)
 - x1: sex ratio. Number of females per 1000 males (Source: Office of the Registrar General and  Census Commissioner, India. (http://censusindia.gov.in)
@@ -25,11 +23,11 @@ INSERTAR LAS ECUACIONES
 
 
 ## Fitted models with seven covariates
-We fitted Model (2) with the seven covariates introduced in Section 2. Uniform distributions on the positive real line have been considered for the standard deviations in the ICAR and LCAR priors whereas default PC-priors have been chosen for DCAR and BYM2 priors. 
+We fitted Model (2), see Vicente et al. (2019), with the seven covariates introduced in Section 2. Uniform distributions on the positive real line have been considered for the standard deviations in the ICAR and LCAR priors whereas default PC-priors have been chosen for DCAR and BYM2 priors. 
 Results with loggamma priors on the log-precisions were almost identical. Table S.1 displays the posterior means for the fixed effects, their standard deviations, the medians and 95% credible intervals obtained from a Type II interaction model with a RW1 prior for time and an ICAR for space. 
 Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect.
 
-- [Table S.1.]: Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
+- *Table S.1.*: Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
 
 | 		| mean | sd  | median | 95% C.I.| 
 |:---	| ---: |---: |   ---: |  :---: |
@@ -45,9 +43,9 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 
 
 ## Fitted models with sex ratio, murders, and burglaries
-We fitted Model (2) with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in Table S.2.
+We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in Table S.2.
 
-- [Table S.2.]: Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
+- *Table S.2.*: Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
 
 |delta	| xi   | gamma | Mean Post D |  pD     | DIC      | WAIC     |  LS   |
 |:---	| :--- | :---  |  		---: | ---:    | ---:     | ---:     | ---:  |
@@ -106,7 +104,7 @@ The estimated relative risks are identical.
 
 Estimated dowry deaths rates (per 100,000 women aged between 15 and 49) for districts of Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasise are displayed in Table S.3.
 
-- [Table S.3.]: Estimated incidence rate of dowry deaths by year per 100,000 women aged between 15 and 49 in districts Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasi
+- *Table S.3.*: Estimated incidence rate of dowry deaths by year per 100,000 women aged between 15 and 49 in districts Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasi
 
 | District 		| 2001 | 2002 | 2003 | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 | 2014 |
 | :--- 			| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -120,14 +118,8 @@ Estimated dowry deaths rates (per 100,000 women aged between 15 and 49) for dist
 # R code
 R code to fit the spatio-temporal models described in the paper, and to reproduce the results, has been included [here](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/).
 
-
-
- ![equation](http://latex.codecogs.com/gif.latex?O_t%3D%5Ctext%20%7B%20Onset%20event%20at%20time%20bin%20%7D%20t)
-- <img src="https://latex.codecogs.com/gif.latex?x_0 |" />
-
 # References
 Vicente, G., Goicoa, T., Fernandez-Rasines, P., and Ugarte, M.D. (2019). Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh. 
-
 ```diff
 - PONER LA REFERENCIA BIEN
 ```
