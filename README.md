@@ -29,6 +29,8 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 
 - **Table S.1.**: Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
 
+![equation](http://www.sciweavers.org/tex2img.php?eq=%5Calpha&bc=White&fc=Black&im=gif&fs=12&ff=arev&edit=0)
+
 | 		| mean | sd  | median | 95% C.I.| 
 |:---	| ---: |---: |   ---: |  :---: |
 |alpha (x0 BJP)          |-9.918 | 0.134 | -9.917 | (-10.189;-9.653)|

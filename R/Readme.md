@@ -2,8 +2,6 @@
 
 This folder contains the necessary R code to fit the spatio-temporal models described in Vicente et al. (2019), and to reproduce the results.
 
-EXPLICAR LOS MODELS?
-
 The [data_JRSSA.RData](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/data_JRSSA.RData) file contains the following R objects:
 
 - ```data```: contains the data set used. It is a dataframe with the following variables,
