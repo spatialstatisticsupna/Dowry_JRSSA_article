@@ -42,6 +42,7 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 |x6 (burglaries)         | 0.059 | 0.016 |  0.059 | (0.027; 0.091) 	|
 
 
+
 ## Fitted models with sex ratio, murders, and burglaries
 We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in Table S.2.
 
@@ -49,7 +50,7 @@ We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5
 
 
 
-|![equation](http://www.sciweavers.org/tex2img.php?eq=%5Cdelta&bc=White&fc=Black&im=gif&fs=12&ff=arev&edit=0)	| xi   | gamma | Mean Post D |  pD     | DIC      | WAIC     |  LS   |
+| delta	| ![equation](http://www.sciweavers.org/tex2img.php?eq=%5Cdelta&bc=White&fc=Black&im=gif&fs=12&ff=arev&edit=0)   | gamma | Mean Post D |  pD     | DIC      | WAIC     |  LS   |
 |:---	| :--- | :---  |  		---: | ---:    | ---:     | ---:     | ---:  |
 | Additive 	| LCAR | RW1  | 6395.885 | 80.780  | 6476.665 | 6526.998 | 3.331 |
 | 	 		| 	   | RW2  | 6398.123 | 80.721  | 6478.844 | 6529.528 | 3.333 |
