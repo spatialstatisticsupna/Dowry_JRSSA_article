@@ -29,11 +29,9 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 
 - **Table S.1.**: Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=%5Calpha&bc=White&fc=Black&im=gif&fs=12&ff=arev&edit=0)
-
 | 		| mean | sd  | median | 95% C.I.| 
 |:---	| ---: |---: |   ---: |  :---: |
-|alpha (x0 BJP)          |-9.918 | 0.134 | -9.917 | (-10.189;-9.653)|
+|![equation](http://www.sciweavers.org/tex2img.php?eq=%5Calpha&bc=White&fc=Black&im=gif&fs=12&ff=arev&edit=0) (x0 BJP)          |-9.918 | 0.134 | -9.917 | (-10.189;-9.653)|
 |x0 (BSP)                |-0.115 | 0.139 | -0.116 | (-0.393; 0.166) |
 |x0 (SP)                 |-0.119 | 0.161 | -0.120 | (-0.437; 0.208) |
 |x1 (sex ratio)          |-0.098 | 0.046 | -0.098 | (-0.187; -0.007)|
@@ -44,12 +42,14 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 |x6 (burglaries)         | 0.059 | 0.016 |  0.059 | (0.027; 0.091) 	|
 
 
+
 ## Fitted models with sex ratio, murders, and burglaries
 We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in Table S.2.
 
 - **Table S.2.**: Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
 
-|delta	| xi   | gamma | Mean Post D |  pD     | DIC      | WAIC     |  LS   |
+
+||![equation](http://www.sciweavers.org/tex2img.php?eq=%20%5Cdelta%20&bc=White&fc=Black&im=gif&fs=12&ff=arev&edit=0)	| ![equation](http://www.sciweavers.org/tex2img.php?eq=%5Cxi&bc=White&fc=Black&im=gif&fs=12&ff=arev&edit=0)   | ![equation](http://www.sciweavers.org/tex2img.php?eq=%5Cgamma&bc=White&fc=Black&im=gif&fs=12&ff=arev&edit=0) | Mean Post D |  pD     | DIC      | WAIC     |  LS   |
 |:---	| :--- | :---  |  		---: | ---:    | ---:     | ---:     | ---:  |
 | Additive 	| LCAR | RW1  | 6395.885 | 80.780  | 6476.665 | 6526.998 | 3.331 |
 | 	 		| 	   | RW2  | 6398.123 | 80.721  | 6478.844 | 6529.528 | 3.333 |
