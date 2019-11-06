@@ -23,10 +23,10 @@ The [data_JRSSA.RData](https://github.com/spatialstatisticsupna/Dowry_JRSSA_arti
 - ```rates_india```: crude rates (per 100,000 women between 15 and 49 years old) in India between 2001 and 2014
 
 
-<br>
+
 [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R) allows you to fit all the models described in the paper.
 
-<br>
+
 The file [reproduce_paper_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/reproduce_paper_JRSSA.R) permit to reproduce the results given in the paper, from the resultados obtained in [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R).
 
 

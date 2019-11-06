@@ -27,7 +27,7 @@ We fitted Model (2), see Vicente et al. (2019), with the seven covariates introd
 Results with loggamma priors on the log-precisions were almost identical. Table S.1 displays the posterior means for the fixed effects, their standard deviations, the medians and 95% credible intervals obtained from a Type II interaction model with a RW1 prior for time and an ICAR for space. 
 Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect.
 
-- *Table S.1.*: Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
+- **Table S.1.**: Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
 
 | 		| mean | sd  | median | 95% C.I.| 
 |:---	| ---: |---: |   ---: |  :---: |
@@ -45,7 +45,7 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 ## Fitted models with sex ratio, murders, and burglaries
 We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in Table S.2.
 
-- *Table S.2.*: Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
+- **Table S.2.**: Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
 
 |delta	| xi   | gamma | Mean Post D |  pD     | DIC      | WAIC     |  LS   |
 |:---	| :--- | :---  |  		---: | ---:    | ---:     | ---:     | ---:  |
@@ -104,7 +104,7 @@ The estimated relative risks are identical.
 
 Estimated dowry deaths rates (per 100,000 women aged between 15 and 49) for districts of Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasise are displayed in Table S.3.
 
-- *Table S.3.*: Estimated incidence rate of dowry deaths by year per 100,000 women aged between 15 and 49 in districts Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasi
+- **Table S.3.**: Estimated incidence rate of dowry deaths by year per 100,000 women aged between 15 and 49 in districts Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasi
 
 | District 		| 2001 | 2002 | 2003 | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 | 2014 |
 | :--- 			| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
