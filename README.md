@@ -42,7 +42,6 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 |x6 (burglaries)         | 0.059 | 0.016 |  0.059 | (0.027; 0.091) 	|
 
 
-
 ## Fitted models with sex ratio, murders, and burglaries
 We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in Table S.2.
 
@@ -122,5 +121,5 @@ R code to fit the spatio-temporal models described in the paper, and to reproduc
 # References
 Vicente, G., Goicoa, T., Fernandez-Rasines, P., and Ugarte, M.D. (2019). Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh. 
 ```diff
-- PONER LA REFERENCIA BIEN
+- PONER REFERENCIA BIEN
 ```
