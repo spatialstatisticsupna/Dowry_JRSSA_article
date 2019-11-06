@@ -48,8 +48,6 @@ We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5
 
 - **Table S.2.**: Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
 
-\frac{\sigma}{\mu}.
-
 | delta	| xi   | gamma | Mean Post D |  pD     | DIC      | WAIC     |  LS   |
 |:---	| :--- | :---  |  		---: | ---:    | ---:     | ---:     | ---:  |
 | Additive 	| LCAR | RW1  | 6395.885 | 80.780  | 6476.665 | 6526.998 | 3.331 |
