@@ -19,7 +19,7 @@ This repository contains supplementary material the R code to fit the models des
 - x6: number of burglaries per 100000 inhabitants (Source: Open Government Data Platform India. https://data.gov.in)
 
 
-- [Figure S.1.](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/figures/fig_s1.pdf): Geographical pattern of SMRs of dowry deaths (left column) for years 2001 and 2011 and spatial pattern of sex ratio (center column), and murders (right column) in the same years
+- [Figure S.1.](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/figures/fig_s1.pdf) Geographical pattern of SMRs of dowry deaths (left column) for years 2001 and 2011 and spatial pattern of sex ratio (center column), and murders (right column) in the same years
 
 
 ## Fitted models with seven covariates
@@ -27,7 +27,7 @@ We fitted Model (2), see Vicente et al. (2019), with the seven covariates introd
 Results with loggamma priors on the log-precisions were almost identical. Table S.1 displays the posterior means for the fixed effects, their standard deviations, the medians and 95% credible intervals obtained from a Type II interaction model with a RW1 prior for time and an ICAR for space. 
 Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect.
 
-- **Table S.1.**: Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
+- **Table S.1.** Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
 
 | 		| mean | sd  | median | 95% C.I.| 
 |:---	| ---: |---: |   ---: |  :---: |
@@ -45,7 +45,7 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 ## Fitted models with sex ratio, murders, and burglaries
 We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in Table S.2.
 
-- **Table S.2.**: Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
+- **Table S.2.** Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
 
 | delta	| xi   | gamma | Mean Post D |  pD     | DIC      | WAIC     |  LS   |
 |:---	| :--- | :---  |  		---: | ---:    | ---:     | ---:     | ---:  |
@@ -94,17 +94,17 @@ We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5
 In Figure S.2. risk trends, standardized mortality ratios (SMRs) and credible intervals are displayed for three different districts in Uttar Pradesh: Aligarth, Kheri, and Varanasi. On the left, we show the relative risk estimates with the additive model (solid black line) and the credible intervals (grey band). We also display the SMRs (solid orange line) and the estimated relative risk estimate with the Type II interaction model (purple line). On the right, we show the relative risk estimates with the type II interaction model (solid purple line) and the credible intervals (grey band). We also display the SMRs (solid orange line) and the estimated relative risk estimate with the additive model (black line). The credible intervals for the additive model are too narrow (indicating underdispersion of the predictive distribution as suggested by the PIT histogram) and the estimated relative risks does not track the SMRs very well for Alligarth and Kheri. It is observed that the estimated relative risks with the type II interaction model track the SMRs much better and the credible intervals are wider. The estimated relative risk for the district of Varanasi are nearly identical with both models. In general, for those districts with rather flat trends, both models produce similar estimates. However, for those districts with increasing or decreasing trends, the Type II interaction model leads to more satisfactory results than the additive model.
 
 
-- [Figure S.2.](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/figures/fig_s2.pdf): Relative risk temporal trends for three different districts in Uttar Pradesh: Aligarth, Kheri, and Varanasi. On the left, estimated relative risk for the additive model (solid black line) with corresponding credible bands in grey together with the SMRs (solid orange line) and the estimated relative risk with the Type II interaction model (solid purple line). On the right, estimated relative risk for the Type II interaction model (solid purple line) with corresponding credible bands in grey together with the SMRs (solid orange line) and the estimated relative risk with the additive model (solid black line)
+- [Figure S.2.](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/figures/fig_s2.pdf) Relative risk temporal trends for three different districts in Uttar Pradesh: Aligarth, Kheri, and Varanasi. On the left, estimated relative risk for the additive model (solid black line) with corresponding credible bands in grey together with the SMRs (solid orange line) and the estimated relative risk with the Type II interaction model (solid purple line). On the right, estimated relative risk for the Type II interaction model (solid purple line) with corresponding credible bands in grey together with the SMRs (solid orange line) and the estimated relative risk with the additive model (solid black line)
 
 Figure S.3. displays the estimated relative risks with a Type II interaction model with an ICAR spatial prior vs. the same Type II interaction model with LCAR, DCAR, and BYM2 spatial priors.
 The estimated relative risks are identical.
 
-- [Figure S.3.](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/figures/fig_s2.pdf): Dispersion plots of the final relative risks obtained with the Type II interaction model with an ICAR spatial prior vs. Type II interaction models with LCAR (top left), DCAR (top right), and BYM2 (bottom)
+- [Figure S.3.](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/figures/fig_s2.pdf) Dispersion plots of the final relative risks obtained with the Type II interaction model with an ICAR spatial prior vs. Type II interaction models with LCAR (top left), DCAR (top right), and BYM2 (bottom)
 
 
 Estimated dowry deaths rates (per 100,000 women aged between 15 and 49) for districts of Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasise are displayed in Table S.3.
 
-- **Table S.3.**: Estimated incidence rate of dowry deaths by year per 100,000 women aged between 15 and 49 in districts Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasi
+- **Table S.3.** Estimated incidence rate of dowry deaths by year per 100,000 women aged between 15 and 49 in districts Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasi
 
 | District 		| 2001 | 2002 | 2003 | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 | 2014 |
 | :--- 			| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |

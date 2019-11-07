@@ -25,5 +25,3 @@ The file [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRS
 
 
 [reproduce_paper_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/reproduce_paper_JRSSA.R) permit to reproduce the results given in the paper, from the resultados obtained in [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R).
-
-
