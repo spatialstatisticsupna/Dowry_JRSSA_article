@@ -16,7 +16,7 @@ The [data_JRSSA.RData](https://github.com/spatialstatisticsupna/Dowry_JRSSA_arti
 
 - ```carto_india```: SpatialPolygonDataFrame object with the cartography of the 33 states (without islands) of India
 
-- ```carto_up```: SpatialPolygonDataFrame object with the cartography of the 70 districts (yaar 2001) of Uttar Pradesh
+- ```carto_up```: SpatialPolygonDataFrame object with the cartography of the 70 districts (year 2001) of Uttar Pradesh
 
 - ```rates_india```: crude rates (per 100,000 women between 15 and 49 years old) in India between 2001 and 2014
 
