@@ -1,5 +1,5 @@
 # Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh
-This repository contains supplementary material the R code to fit the models described in the paper entitled _"Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh"_ (Vicente et al., 2019).
+This repository contains the supplementary material and R code to fit the models described in the paper entitled _"Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh"_ (Vicente et al., 2019).
 
 ## Table of contents
 - [Supplementary Material](#Supplementary-Material)
@@ -22,8 +22,9 @@ This repository contains supplementary material the R code to fit the models des
 
 
 ## Fitted models with seven covariates
-We fitted Model (2), see Vicente et al. (2019), with the seven covariates introduced in Section 2. Uniform distributions on the positive real line have been considered for the standard deviations in the ICAR and LCAR priors whereas default PC-priors have been chosen for DCAR and BYM2 priors. 
-Results with loggamma priors on the log-precisions were almost identical. Table S.1 displays the posterior means for the fixed effects, their standard deviations, the medians and 95% credible intervals obtained from a Type II interaction model with a RW1 prior for time and an ICAR for space. 
+We fitted Model (2), see Vicente et al. (2019), with the seven covariates introduced in the previous section. Uniform distributions on the positive real line have been considered for the standard deviations in the ICAR and LCAR priors whereas default PC-priors have been chosen for DCAR and BYM2 priors. 
+Results with loggamma priors on the log-precisions were almost identical. 
+**Table S.1** displays the posterior means for the fixed effects, their standard deviations, the medians and 95% credible intervals obtained from a Type II interaction model with a RW1 prior for time and an ICAR for space. 
 Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect.
 
 - **Table S.1.** Posterior means, standard deviations and medians of the complete set of fixed effects together with a 95\% credible interval. Results correspond to a type II interaction model with a RW1 for time and an ICAR prior for space
@@ -42,7 +43,7 @@ Only sex ratio (x1), murders (x5), and burglaries (x6) have a significant effect
 
 
 ## Fitted models with sex ratio, murders, and burglaries
-We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in Table S.2.
+We fitted Model (2), see Vicente et al. (2019), with sex ratio (x1), murders (x5), and burglaries (x6) covariables. Model selection criteria (DIC, WAIC, and LS) for the complete set of models are displayed in **Table S.2**.
 
 - **Table S.2.** Model selection criteria for different models that include covariates x1 (sex ratio), x5 (murders), and x6 (burglaries). Posterior deviance, effective number of parameters, DIC, WAIC, and logarithmic score (LS)
 
