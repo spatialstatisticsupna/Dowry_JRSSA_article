@@ -5,14 +5,14 @@ This folder contains the necessary R code to fit the spatio-temporal models desc
 The [data_JRSSA.RData](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/data_JRSSA.RData) file contains the following R objects:
 
 - ```data```: contains the data set used. It is a dataframe with the following variables,
-	- dist: Districts
-	- year: Year (2001:2014)
-	- state: Satte (Uttar Pradesh)
-	- obs: Number of dowry deaths
-	- pop_linear: Female population between 15 and 49 years (linear interpolation)
-	- x1: Sex ratio (Number of women per 1000 men)
-	- x5: Murder (per 100000 people)
-	- x6: Burglary (per 100000 people) (is the entering of a building or residence with the intention to commit a theft or any felonious crime) 
+	- **dist**: Districts
+	- **year**: Year (2001:2014)
+	- **state**: Satte (Uttar Pradesh)
+	- **obs**: Number of dowry deaths
+	- **pop_linear**: Female population between 15 and 49 years (linear interpolation)
+	- **x1**: Sex ratio (Number of women per 1000 men)
+	- **x5**: Murder (per 100000 people)
+	- **x6**: Burglary (per 100000 people) (is the entering of a building or residence with the intention to commit a theft or any felonious crime) 
 
 - ```carto_india```: SpatialPolygonDataFrame object with the cartography of the 33 states (without islands) of India
 
