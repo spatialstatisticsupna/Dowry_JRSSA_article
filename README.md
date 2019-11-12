@@ -121,5 +121,5 @@ R code to fit the spatio-temporal models described in the paper, and to reproduc
 # References
 Vicente, G., Goicoa, T., Fernandez-Rasines, P., and Ugarte, M.D. (2019). Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh. 
 ```diff
-- PONER REFERENCIA BIEN
+- PONER REFERENCIA COMPLETA
 ```
