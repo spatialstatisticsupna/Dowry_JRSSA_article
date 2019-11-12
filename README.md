@@ -99,7 +99,7 @@ In **Figure S.2.** risk trends, standardized mortality ratios (SMRs) and credibl
 **Figure S.3.** displays the estimated relative risks with a Type II interaction model with an ICAR spatial prior vs. the same Type II interaction model with LCAR, DCAR, and BYM2 spatial priors.
 The estimated relative risks are identical.
 
-- [Figure S.3.](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/figures/fig_s2.pdf) Dispersion plots of the final relative risks obtained with the Type II interaction model with an ICAR spatial prior vs. Type II interaction models with LCAR (top left), DCAR (top right), and BYM2 (bottom)
+- [Figure S.3.](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/figures/fig_s3.pdf) Dispersion plots of the final relative risks obtained with the Type II interaction model with an ICAR spatial prior vs. Type II interaction models with LCAR (top left), DCAR (top right), and BYM2 (bottom)
 
 
 Estimated dowry deaths rates (per 100,000 women aged between 15 and 49) for districts of Aligarh, Kanpur Dehat, Kheri, Shrawasti, Sitapur, and Varanasise are displayed in **Table S.3.**

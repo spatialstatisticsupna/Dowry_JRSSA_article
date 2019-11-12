@@ -75,59 +75,6 @@ model<- "" ## selected model
 ## Figures                                                                              ##
 ##########################################################################################
 ##################################
-## Figure 1.  Map of India with Uttar Pradesh shaded, and districts of Uttar Pradesh
-##################################
-## india map
-carto_india$color<- rep(c(0,1,0),c(30,1,2))
-map_india<- tm_shape(carto_india) + # , bbox=c(68,7,98,36)
-  tm_polygons(col="color", legend.show=FALSE,palette = c("#E6AB02","#66A61E")) +
-  tm_grid(n.x=4, n.y=4, alpha=0.5) + 
-  tm_style("classic")
-
-## uttar pradesh map 
-map_up<- tm_shape(carto_up, bbox=c(76.5, 23.5, 85, 30.5)) + tm_polygons(col="palegreen3") +
-  tm_grid(n.x=4, n.y=4, alpha=0.5) + 
-  tm_text(text="ID_area", size=1, fontface=5) + 
-  tm_style("classic")+ tm_format("World")
-
-## print figure 1
-map_up
-print(map_india, vp = grid::viewport(0.85, 0.775, width = 0.45, height = 0.45))
-
-## rm
-rm(list=c("map_india", "map_up"))
-
-##################################
-## Figure 2.  Evolution of crude rates in India, Uttar Pradesh and the districts Aligarh and Kheri
-##################################
-## table evolution of crude rates
-rates<-matrix(0, nrow=n+2, ncol=t)
-colnames(rates)<-c(t.from:t.to)
-rownames(rates)<-c(paste(unique(data$dist)), "Uttar Pradesh", "India")
-for(j in 1:t){
-  for (i in 1:n){
-    rates[i,j]<-100000*data[data$ID_area==i & data$ID_year==j, c("obs")]/ data[data$ID_area==i & data$ID_year==j, c("pop_linear")]
-  }
-  rates[n+1,j]<-100000*sum(data[data$ID_year==j, c("obs")])/sum(data[data$ID_year==j, c("pop_linear")]) # Uttar Pradesh
-  rates[n+2,j]<- rates_india[j] # India
-}
-
-
-## print figure 2
-plot(t.from:t.to, rates[1,],type="l",xlab ="",ylab ="", ylim=c(0.25, 14.75),col="gray", lwd=1, cex.axis=1.1, cex.lab=1.1)
-for(i in 2:n){
-  lines(t.from:t.to, rates[i,],col="gray",lwd=1)  
-}
-lines(t.from:t.to, rates[rownames(rates)=="Uttar Pradesh",], col="darkolivegreen",lwd=4, type = "c")  # Uttar Pradesh
-lines(t.from:t.to, rates[rownames(rates)=="India",], col="tomato4",lwd=4, type = "c")                 # India
-lines(t.from:t.to, rates[rownames(rates)=="Aligarh",], col="chocolate1",lwd=2.5, type = "l")          # Aligarh
-lines(t.from:t.to, rates[rownames(rates)=="Kheri",], col="blue4", lwd=2.5, type = "l")                # Kheri
-legend("top",  c("Uttar Pradesh","India",  "Aligarh", "Kheri"), ncol=2, pch=c("-", "--"), col=c("darkolivegreen","tomato4", "chocolate1", "blue4"), bty="n",lwd=c(4,4,2.5,2.5), cex=1.1)
-
-## rm
-rm(list=c( "rates", "i", "j"))
-
-##################################
 ## Figure 3.  PIT histograms for the additive model (left) and the Type II interaction model (right)
 ##################################
 ## function Probability Integral Transform
@@ -420,42 +367,6 @@ rm(list = c("id.area", "region.plot"))
 ##########################################################################################
 ## Tables                                                                               ##
 ##########################################################################################
-##################################
-## Table 1. Descriptive statistics  
-##################################
-table.1<- as.data.frame(matrix(0,nrow=t,ncol=9))
-colnames(table.1)<-c("Year", "min", "", "Q1", "mean","sd", "Q3", "max", "")
-for (i in 1:t){
-  aux<-data[data$year==2000+i & data$state=="Uttar Pradesh" ,c("obs")]
-  table.1[i,]<-c(2000+i,   
-                 min(aux), paste0("(",paste0(data[data$year==2000+i & data$state=="Uttar Pradesh" & data$obs==min(aux), c("dist")], collapse = ", "), ")"),
-                 round(quantile(aux)[2], 2), round(mean(aux), 2), round(sd(aux),2), round(quantile(aux)[4],2),  
-                 max(aux), paste0("(",paste0(data[data$year==2000+i & data$state=="Uttar Pradesh" & data$obs==max(aux), c("dist")], collapse = ", "), ")")
-  )
-}
-
-## rm
-rm(list=c("aux", "i"))
-
-##################################
-## Table 2. Correlations between crude rates of dowry deaths and the covariates in the 
-##          years 2001 and 2011   
-##################################
-table.2<- matrix(NA, ncol=6, nrow=2)
-colnames(table.2)<- c("x1", "x2", "x3", "x4", "x5", "x6")
-rownames(table.2)<- c("2001", "2011")
-
-data_1<- data[data$ID_year==1,]
-table.2[1,]<- c(cor(log(data_1$smr), data_1$x1_stand), cor(log(data_1$smr), data_1$x2_stand), cor(log(data_1$smr), data_1$x3_stand),
-                cor(log(data_1$smr), data_1$x4_stand), cor(log(data_1$smr), data_1$x5_stand), cor(log(data_1$smr), data_1$x6_stand))
-data_1<- data[data$ID_year==11,]
-table.2[2,]<- c(cor(log(data_1$smr), data_1$x1_stand), cor(log(data_1$smr), data_1$x2_stand), cor(log(data_1$smr), data_1$x3_stand),
-                cor(log(data_1$smr), data_1$x4_stand), cor(log(data_1$smr), data_1$x5_stand), cor(log(data_1$smr), data_1$x6_stand))
-
-
-##rm
-rm(list=c("data_1"))
-
 ##################################
 ## Table 3. Posterior means, standard deviations and medians of the fixed effects together 
 ##          with a 95% credible interval

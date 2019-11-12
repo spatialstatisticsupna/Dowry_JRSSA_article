@@ -14,14 +14,10 @@ The [data_JRSSA.RData](https://github.com/spatialstatisticsupna/Dowry_JRSSA_arti
 	- **x5**: Murder (per 100000 people)
 	- **x6**: Burglary (per 100000 people) (is the entering of a building or residence with the intention to commit a theft or any felonious crime) 
 
-- ```carto_india```: SpatialPolygonDataFrame object with the cartography of the 33 states (without islands) of India
-
 - ```carto_up```: SpatialPolygonDataFrame object with the cartography of the 70 districts (year 2001) of Uttar Pradesh
-
-- ```rates_india```: crude rates (per 100,000 women between 15 and 49 years old) in India between 2001 and 2014
 
 
 The file [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R) allows you to fit all the models described in the paper.
 
 
-[reproduce_paper_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/reproduce_paper_JRSSA.R) permit to reproduce the results given in the paper, from the resultados obtained in [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R).
+[reproduce_paper_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/reproduce_paper_JRSSA.R) allows to reproduce the tables and figures of Section 4 of the paper and of the supplementary material, once the [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R) file has been executed.
