@@ -20,4 +20,4 @@ The [data_JRSSA.RData](https://github.com/spatialstatisticsupna/Dowry_JRSSA_arti
 The file [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R) allows you to fit all the models described in the paper.
 
 
-[reproduce_paper_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/reproduce_paper_JRSSA.R) allows to reproduce the tables and figures of Section 4 of the paper and of the supplementary material, once the [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R) file has been executed.
+[reproduce_paper_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/reproduce_paper_JRSSA.R) allows to reproduce tables and figures of Section 4 of the paper and the supplementary material, once the [fit_models_JRSSA.R](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/fit_models_JRSSA.R) file has been executed.
