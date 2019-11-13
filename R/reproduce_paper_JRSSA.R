@@ -69,8 +69,7 @@ fc.risks<-function(x){ x/R }
 ##################################
 ## load the results obtained with "fit_models_JRSSA.R"
 
-model<- "" ## selected model 
-
+model<- ""      ## selected model, for example: model<- models$icar.rw1.t2
 ##########################################################################################
 ## Figures                                                                              ##
 ##########################################################################################
@@ -486,15 +485,6 @@ for(i in c(2:4)){
 
 ## rm
 rm(list=c("models.s3","risks", "md"))
-
-##################################
-## Table S.1. Posterior means, standard deviations and medians of the fixed effects together
-##            with a 95% credible interval (x1, x2, x3, x4, x5, x6)
-##################################
-table.s1<- as.data.frame(round(models_all$icar.rw1.t2$summary.fixed[, c(1,2,4,3,5)],3))  
-colnames(table.s1)<- c("mean", "sd", "median", "q.025", "q.975")
-rownames(table.s1)<- c("alpha (x0 BJP)", "x0 (BSP)", "x0 (SP)", "x1 (sex ratio)", "x2 (population density)", "x3 (female literacy)", 
-                       "x4 (per capita income)", "x5 (murders)", "x6 (burglaries)")
 
 ##################################
 ## Table S.2. Model selection criteria for different models including the covariates, 
