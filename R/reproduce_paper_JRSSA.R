@@ -38,7 +38,7 @@ t.from<- min(data$year)
 t.to<- max(data$year)
 
 ## Standardized of covariates
-for(i in 1:6){ eval(parse(text= paste0("data$x",i,"_stand<- scale(data$x",i,")" ))) }
+for(i in c(1,5,6)){ eval(parse(text= paste0("data$x",i,"_stand<- scale(data$x",i,")" ))) }
 
 ## Spatial neighborhood matrix (Q_{xi})
 spdep::nb2INLA("uttar_pradesh_nb.graph", spdep::poly2nb(carto_up))

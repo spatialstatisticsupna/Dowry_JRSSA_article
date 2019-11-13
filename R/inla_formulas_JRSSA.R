@@ -1,5 +1,5 @@
 ###########################################################################################################################################
-## (1) Spartio-temporal random effect: additive                                                                                          ##
+## (1) Spatio-temporal random effect: additive                                                                                          ##
 ###########################################################################################################################################
 #####################################################################
 ## (1.1) Spatial random effect: LCAR                               ##
@@ -70,7 +70,7 @@ icar.rw2.ad<- O ~ f(ID.area, model="besag", graph=g, constr=TRUE, hyper=list(pre
                   f(ID.year, model="rw2", constr=TRUE, hyper=list(prec=list(prior=sdunif))) + 
                   x1_stand+x5_stand+x6_stand
 ###########################################################################################################################################
-## (2) Spartio-temporal random effect: Type I                                                                                            ##
+## (2) Spatio-temporal random effect: Type I                                                                                            ##
 ###########################################################################################################################################
 #####################################################################
 ## (2.1) Spatial random effect: LCAR                               ##
@@ -153,7 +153,7 @@ icar.rw2.t1<- O ~ f(ID.area, model="besag", graph=g, constr=TRUE, hyper=list(pre
                   f(ID.area.year, model="iid", constr=TRUE, hyper=list(prec=list(prior=sdunif)), extraconstr=list(A=matrix(rep(1:t,n),1,n*t),e=0)) + 
                   x1_stand+x5_stand+x6_stand
 ###########################################################################################################################################
-## (3) Spartio-temporal random effect: Type II                                                                                           ##
+## (3) Spatio-temporal random effect: Type II                                                                                           ##
 ###########################################################################################################################################
 #####################################################################
 ## (3.1) Spatial random effect: LCAR                               ##
@@ -212,7 +212,7 @@ icar.rw2.t2<- O ~ f(ID.area, model="besag", graph=g, constr=TRUE, hyper=list(pre
                   f(ID.area.year, model="generic0", Cmatrix=R_2_2, rankdef=r_def_2_2, constr=TRUE, hyper=list(prec=list(prior=sdunif)), extraconstr=list(A=A_constr_2_2, e=rep(0,n))) + 
                   x1_stand+x5_stand+x6_stand
 ###########################################################################################################################################
-## (4) Spartio-temporal random effect: Type III                                                                                          ##
+## (4) Spatio-temporal random effect: Type III                                                                                          ##
 ###########################################################################################################################################
 #####################################################################
 ## (4.1) Spatial random effect: LCAR                               ##
@@ -295,7 +295,7 @@ icar.rw2.t3<- O ~ f(ID.area, model="besag", graph=g, constr=TRUE, hyper=list(pre
                   f(ID.area.year, model="generic0", Cmatrix=R_2_3, rankdef=r_def_2_3, constr=TRUE, hyper=list(prec=list(prior=sdunif)),extraconstr=list(A=A_constr_2_3, e=rep(0,t))) + 
                   x1_stand+x5_stand+x6_stand
 ###########################################################################################################################################
-## (5) Spartio-temporal random effect: Type IV                                                                                           ##
+## (5) Spatio-temporal random effect: Type IV                                                                                           ##
 ###########################################################################################################################################
 #####################################################################
 ## (5.1) Spatial random effect: LCAR                               ##

@@ -38,7 +38,7 @@ t.from<- min(data$year)
 t.to<- max(data$year)
 
 ## Standardized of covariates
-for(i in 1:6){ eval(parse(text= paste0("data$x",i,"_stand<- scale(data$x",i,")" ))) }
+for(i in c(1,5,6)){ eval(parse(text= paste0("data$x",i,"_stand<- scale(data$x",i,")" ))) }
 
 ## Spatial neighborhood matrix (Q_{xi})
 spdep::nb2INLA("uttar_pradesh_nb.graph", spdep::poly2nb(carto_up))
@@ -78,21 +78,35 @@ log_jacobian = log(beta*(1-beta));
 return(logdens+log_jacobian)"
 
 ## Define appropriate constraint matrices
+## (a) Spatio-temporal random effect: Type I 
 id_nt<-diag(1,nrow=n*t)
-R_1_2 <- kronecker(Q_gammaRW1,diag(n)); r_def_1_2 <- n;   A_constr_1_2 <- kronecker(matrix(1,1,t),diag(n))
-R_1_2_scaled<- R_1_2*exp(mean(log(diag(INLA:::inla.ginv(R_1_2)))))
-R_2_2 <- kronecker(Q_gammaRW2,diag(n)); r_def_2_2 <- 2*n; A_constr_2_2 <- kronecker(matrix(1,1,t),diag(n))
-R_2_2_scaled<- R_2_2*exp(mean(log(diag(INLA:::inla.ginv(R_2_2)))))
-R_0_3 <- kronecker(diag(t),Q_xi); r_def_0_3 <- t; A_constr_0_3 <- kronecker(diag(t),matrix(1,1,n))
-R_0_3_scaled<- R_0_3*exp(mean(log(diag(INLA:::inla.ginv(R_0_3)))))
-R_1_3 <- kronecker(diag(t),Q_xi); r_def_1_3 <- t; A_constr_1_3 <- kronecker(diag(t),matrix(1,1,n))
-R_1_3_scaled<- R_1_3*exp(mean(log(diag(INLA:::inla.ginv(R_1_3)))))
-R_2_3 <- kronecker(diag(t),Q_xi); r_def_2_3 <- t; A_constr_2_3 <- kronecker(diag(t),matrix(1,1,n))
-R_2_3_scaled<- R_2_3*exp(mean(log(diag(INLA:::inla.ginv(R_2_3)))))
-R_1_4 <- kronecker(Q_gammaRW1,Q_xi); r_def_1_4 <- n+t-1;   A.1.1 <- kronecker(matrix(1,1,t),diag(n)); A.1.2 <- kronecker(diag(t),matrix(1,1,n)); A_constr_1_4 <- rbind(A.1.1,A.1.2)
-R_1_4_scaled<- R_1_4*exp(mean(log(diag(INLA:::inla.ginv(R_1_4)))))
-R_2_4 <- kronecker(Q_gammaRW2,Q_xi); r_def_2_4 <- 2*n+t-2; A.2.1 <- kronecker(matrix(1,1,t),diag(n)); A.2.2 <- kronecker(diag(t),matrix(1,1,n)); A_constr_2_4 <- rbind(A.2.1,A.2.2)
-R_2_4_scaled<- R_2_4*exp(mean(log(diag(INLA:::inla.ginv(R_2_4)))))
+
+## (b) Spatio-temporal random effect: Type II
+  ## (b.1) Temporal random effect: RW1
+R_1_2 <- kronecker(Q_gammaRW1,diag(n)); r_def_1_2 <- n;   A_constr_1_2 <- kronecker(matrix(1,1,t),diag(n)) # LCAR, DCAR, ICAR
+R_1_2_scaled<- R_1_2*exp(mean(log(diag(INLA:::inla.ginv(R_1_2)))))                                         # BYM2
+  ## (b.2) Temporal random effect: RW2
+R_2_2 <- kronecker(Q_gammaRW2,diag(n)); r_def_2_2 <- 2*n; A_constr_2_2 <- kronecker(matrix(1,1,t),diag(n)) # LCAR, DCAR, ICAR
+R_2_2_scaled<- R_2_2*exp(mean(log(diag(INLA:::inla.ginv(R_2_2)))))                                         # BYM2
+
+## (c) Spatio-temporal random effect: Type III
+## (c.1) Temporal random effect: iid
+R_0_3 <- kronecker(diag(t),Q_xi); r_def_0_3 <- t; A_constr_0_3 <- kronecker(diag(t),matrix(1,1,n))   # LCAR, DCAR, ICAR
+R_0_3_scaled<- R_0_3*exp(mean(log(diag(INLA:::inla.ginv(R_0_3)))))                                   # BYM2
+## (c.2) Temporal random effect: RW1
+R_1_3 <- kronecker(diag(t),Q_xi); r_def_1_3 <- t; A_constr_1_3 <- kronecker(diag(t),matrix(1,1,n))   # LCAR, DCAR, ICAR
+R_1_3_scaled<- R_1_3*exp(mean(log(diag(INLA:::inla.ginv(R_1_3)))))                                   # BYM2
+## (c.3) Temporal random effect: RW2
+R_2_3 <- kronecker(diag(t),Q_xi); r_def_2_3 <- t; A_constr_2_3 <- kronecker(diag(t),matrix(1,1,n))   # LCAR, DCAR, ICAR
+R_2_3_scaled<- R_2_3*exp(mean(log(diag(INLA:::inla.ginv(R_2_3)))))                                   # BYM2  
+
+## (d) Spatio-temporal random effect: Type IV
+## (d.1) Temporal random effect: RW1
+R_1_4 <- kronecker(Q_gammaRW1,Q_xi); r_def_1_4 <- n+t-1;   A.1.1 <- kronecker(matrix(1,1,t),diag(n)); A.1.2 <- kronecker(diag(t),matrix(1,1,n)); A_constr_1_4 <- rbind(A.1.1,A.1.2) # LCAR, DCAR, ICAR
+R_1_4_scaled<- R_1_4*exp(mean(log(diag(INLA:::inla.ginv(R_1_4)))))  # BYM2
+## (d.2) Temporal random effect: RW1
+R_2_4 <- kronecker(Q_gammaRW2,Q_xi); r_def_2_4 <- 2*n+t-2; A.2.1 <- kronecker(matrix(1,1,t),diag(n)); A.2.2 <- kronecker(diag(t),matrix(1,1,n)); A_constr_2_4 <- rbind(A.2.1,A.2.2) # LCAR, DCAR, ICAR
+R_2_4_scaled<- R_2_4*exp(mean(log(diag(INLA:::inla.ginv(R_2_4))))) # BYM2
 
 ## Load formulas
 source("inla_formulas_JRSSA.R")
