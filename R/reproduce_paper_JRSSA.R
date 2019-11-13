@@ -385,7 +385,7 @@ rownames(table.3)<- c("alpha", "x1 (sex ratio)", "x5 (murders)", "x6 (burglaries
 carto<- carto_up
 years<- c(2001,2011)
 eval(parse(text= paste0("carto$smr_",years,"<-data[data$year==",years,",]$smr") ) )
-j<-1:6
+j<-c(1,5,6)
 for(i in 1:length(years)){ eval(parse(text=  paste0("carto$x",j,"_",years[i],"<-data[data$year==",years[i],",]$x",j)) ) }
 
 ## print figure S.1
@@ -429,7 +429,8 @@ q1.2<- matrix(unlist(lapply(marg, function(x){inla.qmarginal(0.025, x)})), nrow=
 q2.2<- matrix(unlist(lapply(marg, function(x){inla.qmarginal(0.975, x)})), nrow=n, ncol=t, byrow = FALSE)
 
 ## minimum and maximum values
-inf<-0.15; top<- 3.5
+inf<-0.15
+top<- 3.5
 x<-1:t
 
 ## print figure S.2
