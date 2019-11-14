@@ -37,7 +37,7 @@ t<- length(unique(data$ID_year))
 t.from<- min(data$year)
 t.to<- max(data$year)
 
-## Standardized of covariates
+## Standardize covariates
 for(i in c(1,5,6)){ eval(parse(text= paste0("data$x",i,"_stand<- scale(data$x",i,")" ))) }
 
 ## Spatial neighborhood matrix (Q_{xi})
