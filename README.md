@@ -1,5 +1,5 @@
 # Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh
-This repository contains the supplementary material and R code to fit the models described in the paper entitled _"Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh"_ (Vicente et al., 2019).
+This repository contains the supplementary material and R code to fit the models described in the paper entitled _"Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh"_ (Vicente et al., 2020).
 
 ## Table of contents
 - [Supplementary Material](#Supplementary-Material)
@@ -119,5 +119,5 @@ Estimated dowry deaths rates (per 100,000 women aged between 15 and 49) for dist
 R code to fit the spatio-temporal models described in the paper, and to reproduce the results, has been included [here](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/).
 
 # References
-Vicente, G., Goicoa, T., Fernandez-Rasines, P., and Ugarte, M.D. (2019). Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh. 
-_Journal of the Royal Statistical Society A_, in press.
+Vicente, G., Goicoa, T., Fernandez-Rasines, P., and Ugarte, M.D. (2020). Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh. 
+_Journal of the Royal Statistical Society A_, in press, doi:10.1111/rssa.12545.

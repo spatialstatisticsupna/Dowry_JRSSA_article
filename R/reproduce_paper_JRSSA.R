@@ -1,7 +1,11 @@
 ##########################################################################################
 ## Title: Crime against women in India: unveiling spatial patterns and temporal trends  ##
 ##        of dowry deaths in the districs of Uttar Pradesh                              ##
+##                                                                                      ##
 ## Authors: Vicente, G. - Goicoa, T. - Fernandez-Rasines, P. - Ugarte, M.D.             ##
+##                                                                                      ##
+## https://doi.org/10.1111/rssa.12545                                                   ##
+##                                                                                      ##
 ##########################################################################################
 rm(list = ls())
 
