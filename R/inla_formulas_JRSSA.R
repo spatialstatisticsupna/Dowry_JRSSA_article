@@ -326,7 +326,7 @@ lcar.rw2.t4<- O ~ f(ID.area, model="generic1", Cmatrix=Q_Leroux, constr=TRUE, hy
 ########################################
 ## Temporal random effect: RW1
 bym2.rw1.t4<- O ~ f(ID.area, model="bym2", graph=g, scale.model=TRUE, constr=TRUE, hyper=list(phi=list(prior="pc", param=c(0.5,2/3), initial=-3), prec=list(prior="pc.prec", param=c(0.2/0.31,0.01), initial=5))) +
-                  f(ID.year, model="iid", constr=TRUE, hyper=list(theta=list(prior="loggamma",param=c(1,0.01)))) +
+                  f(ID.year, model="rw1", scale.model = TRUE, constr=TRUE, hyper=list(theta = list(prior="pc.prec", param=c(1,0.01)))) +
                   f(ID.area.year, model="generic0", Cmatrix=R_1_4_scaled, rankdef=r_def_1_4, constr=TRUE, hyper=list(prec=list(prior="pc.prec", param=c(1,0.01), initial=5)), extraconstr=list(A=A_constr_1_4, e=rep(0,n+t))) + 
                   x1_stand+x5_stand+x6_stand
 
