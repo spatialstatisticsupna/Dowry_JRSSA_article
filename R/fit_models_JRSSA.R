@@ -88,28 +88,33 @@ id_nt<-diag(1,nrow=n*t)
 ## (b) Spatio-temporal random effect: Type II
   ## (b.1) Temporal random effect: RW1
 R_1_2 <- kronecker(Q_gammaRW1,diag(n)); r_def_1_2 <- n;   A_constr_1_2 <- kronecker(matrix(1,1,t),diag(n)) # LCAR, DCAR, ICAR
+A_constr_1_2 <- A_constr_1_2[-1,]
 R_1_2_scaled<- R_1_2*exp(mean(log(diag(INLA:::inla.ginv(R_1_2)))))                                         # BYM2
   ## (b.2) Temporal random effect: RW2
 R_2_2 <- kronecker(Q_gammaRW2,diag(n)); r_def_2_2 <- 2*n; A_constr_2_2 <- kronecker(matrix(1,1,t),diag(n)) # LCAR, DCAR, ICAR
+A_constr_2_2 <- A_constr_2_2[-1,]
 R_2_2_scaled<- R_2_2*exp(mean(log(diag(INLA:::inla.ginv(R_2_2)))))                                         # BYM2
 
 ## (c) Spatio-temporal random effect: Type III
-## (c.1) Temporal random effect: iid
+  ## (c.1) Temporal random effect: iid
 R_0_3 <- kronecker(diag(t),Q_xi); r_def_0_3 <- t; A_constr_0_3 <- kronecker(diag(t),matrix(1,1,n))   # LCAR, DCAR, ICAR
+A_constr_0_3 <- A_constr_0_3[-1,]
 R_0_3_scaled<- R_0_3*exp(mean(log(diag(INLA:::inla.ginv(R_0_3)))))                                   # BYM2
-## (c.2) Temporal random effect: RW1
+  ## (c.2) Temporal random effect: RW1
 R_1_3 <- kronecker(diag(t),Q_xi); r_def_1_3 <- t; A_constr_1_3 <- kronecker(diag(t),matrix(1,1,n))   # LCAR, DCAR, ICAR
+A_constr_1_3 <- A_constr_1_3[-1,]
 R_1_3_scaled<- R_1_3*exp(mean(log(diag(INLA:::inla.ginv(R_1_3)))))                                   # BYM2
-## (c.3) Temporal random effect: RW2
+  ## (c.3) Temporal random effect: RW2
 R_2_3 <- kronecker(diag(t),Q_xi); r_def_2_3 <- t; A_constr_2_3 <- kronecker(diag(t),matrix(1,1,n))   # LCAR, DCAR, ICAR
+A_constr_2_3 <- A_constr_2_3[-1,]
 R_2_3_scaled<- R_2_3*exp(mean(log(diag(INLA:::inla.ginv(R_2_3)))))                                   # BYM2  
 
 ## (d) Spatio-temporal random effect: Type IV
-## (d.1) Temporal random effect: RW1
-R_1_4 <- kronecker(Q_gammaRW1,Q_xi); r_def_1_4 <- n+t-1;   A.1.1 <- kronecker(matrix(1,1,t),diag(n)); A.1.2 <- kronecker(diag(t),matrix(1,1,n)); A_constr_1_4 <- rbind(A.1.1,A.1.2) # LCAR, DCAR, ICAR
+  ## (d.1) Temporal random effect: RW1
+R_1_4 <- kronecker(Q_gammaRW1,Q_xi); r_def_1_4 <- n+t-1;   A.1.1 <- kronecker(matrix(1,1,t),diag(n)); A.1.2 <- kronecker(diag(t),matrix(1,1,n)); A_constr_1_4 <- rbind(A.1.1[-1,],A.1.2[-1,]) # LCAR, DCAR, ICAR
 R_1_4_scaled<- R_1_4*exp(mean(log(diag(INLA:::inla.ginv(R_1_4)))))  # BYM2
-## (d.2) Temporal random effect: RW1
-R_2_4 <- kronecker(Q_gammaRW2,Q_xi); r_def_2_4 <- 2*n+t-2; A.2.1 <- kronecker(matrix(1,1,t),diag(n)); A.2.2 <- kronecker(diag(t),matrix(1,1,n)); A_constr_2_4 <- rbind(A.2.1,A.2.2) # LCAR, DCAR, ICAR
+  ## (d.2) Temporal random effect: RW1
+R_2_4 <- kronecker(Q_gammaRW2,Q_xi); r_def_2_4 <- 2*n+t-2; A.2.1 <- kronecker(matrix(1,1,t),diag(n)); A.2.2 <- kronecker(diag(t),matrix(1,1,n)); A_constr_2_4 <- rbind(A.2.1[-1,],A.2.2[-1,]) # LCAR, DCAR, ICAR
 R_2_4_scaled<- R_2_4*exp(mean(log(diag(INLA:::inla.ginv(R_2_4))))) # BYM2
 
 ## Load formulas
