@@ -117,6 +117,7 @@ Estimated dowry deaths rates (per 100,000 women aged between 15 and 49) for dist
 
 # R code
 R code to fit the spatio-temporal models described in the paper, and to reproduce the results, has been included [here](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/).
+
 Slight modifications have been introduced in order to be compatible with the 20.01.08 testing version of INLA.
 More precisely, we eliminate the redundant constraints in the extraconstr argument of the INLA::inla() function.
 
