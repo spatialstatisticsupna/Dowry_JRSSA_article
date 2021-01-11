@@ -2,6 +2,9 @@
 
 This folder contains the necessary R code to fit the spatio-temporal models described in Vicente et al. (2020), and to reproduce the results.
 
+Slight modifications have been introduced in order to be compatible with the 20.01.08 testing version of INLA.
+More precisely, we eliminate the redundant constraints in the extraconstr argument of the INLA::inla() function.
+
 The [data_JRSSA.RData](https://github.com/spatialstatisticsupna/Dowry_JRSSA_article/blob/master/R/data_JRSSA.RData) file contains the following R objects:
 
 - ```data```: contains the data set used. It is a dataframe with the following variables,
