@@ -1,5 +1,5 @@
 # Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh
-This repository contains the supplementary material and R code to fit the models described in the paper entitled _"Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh"_ (Vicente et al., 2020).
+This repository contains the supplementary material and R code to fit the models described in the paper entitled _"Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh"_ [(Vicente et al., 2020)](https://doi.org/10.1111/rssa.12545).
 
 ## Table of contents
 - [Supplementary Material](#Supplementary-Material)
