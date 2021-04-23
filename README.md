@@ -121,6 +121,8 @@ R code to fit the spatio-temporal models described in the paper, and to reproduc
 Slight modifications have been introduced in order to be compatible with the 20.01.08 testing version of INLA.
 More precisely, we eliminate the redundant constraints in the extraconstr argument of the INLA::inla() function.
 
+# Acknowledgements
+This work has been supported by the Spanish Ministry of Economy, Industry, and Competitiveness (project MTM2017-82553-R, AEI/FEDER, UE), and partially funded by the Caixa Foundation (grant 1000010434), Caja Navarra Foundation and National University of Distance Learning, Pamplona, under agreement LCF/PR/PR15/51100007.
 
 # References
 Vicente, G., Goicoa, T., Fernandez-Rasines, P., and Ugarte, M.D. (2020). Crime against women in India: unveiling spatial patterns and temporal trends of dowry deaths in the districs of Uttar Pradesh. 
